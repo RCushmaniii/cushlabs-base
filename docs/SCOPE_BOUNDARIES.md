@@ -1,4 +1,5 @@
 ---
+
 # 📌 SCOPE_BOUNDARIES.md
 
 This document is the guardrail for CushLabs Base. If a request conflicts with anything below, the correct response is:
