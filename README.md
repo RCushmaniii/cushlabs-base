@@ -2,9 +2,9 @@
 
 Production-grade SaaS scaffold built with Next.js App Router, TypeScript, Tailwind, and Supabase.
 
-This repo is designed to be reused across client MVPs, internal experiments, and future SaaS products.
+This repo is designed to be cloned and reused for real MVPs, internal tools, and client projects where correctness, security, and clarity matter.
 
-## What you get (v1)
+## What You Get (v1)
 
 - Next.js App Router + TypeScript (strict)
 - Supabase Auth (email magic link)
@@ -12,7 +12,12 @@ This repo is designed to be reused across client MVPs, internal experiments, and
 - Admin boundary (`/admin`) gated by `profiles.role`
 - Supabase schema migration with RLS policies
 - Minimal CI (typecheck, lint, build)
-- Decision docs in `docs/`
+
+## Who This Is For
+
+- Solo developers or small teams building real MVPs
+- Freelancers / agencies who want a reliable starting point
+- Engineers who care about auth, RLS, and production hygiene
 
 ## Quickstart
 
@@ -34,14 +39,14 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 ### 3) Apply database migration + RLS
 
-This repo includes an initial migration:
+Migration:
 
 - `supabase/migrations/20251214190000_init.sql`
 
-Apply it using either:
+Apply via:
 
 - Supabase Dashboard SQL editor, or
-- Supabase CLI migrations (recommended for local development)
+- Supabase CLI (recommended)
 
 ### 4) Run the app
 
@@ -56,15 +61,9 @@ Routes:
 - `/app` protected app area
 - `/admin` admin-only area
 
-## Scripts
+## Documentation & Decisions
 
-- `npm run dev`
-- `npm run build`
-- `npm run start`
-- `npm run typecheck`
-- `npm run lint`
-
-## Docs
+All architectural intent, scope boundaries, and platform decisions live in `/docs`.
 
 Start here:
 
