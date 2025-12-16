@@ -20,7 +20,12 @@ export async function signInWithEmail(formData: FormData) {
   }
 
   const env = getEnv();
-  const origin = headers().get('origin') ?? env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
+  const h = headers();
+  const forwardedHost = h.get('x-forwarded-host');
+  const forwardedProto = h.get('x-forwarded-proto') ?? 'https';
+  const headerOrigin =
+    h.get('origin') ?? (forwardedHost ? `${forwardedProto}://${forwardedHost}` : null);
+  const origin = env.NEXT_PUBLIC_APP_URL ?? headerOrigin ?? 'http://localhost:3000';
   const supabase = createSupabaseServerClient();
 
   const { error } = await supabase.auth.signInWithOtp({
