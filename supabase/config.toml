@@ -1,4 +1,4 @@
-project_id = "cushlabs-base"
+project_id = "nextjs-supabase-auth-starter"
 
 [api]
 enabled = true

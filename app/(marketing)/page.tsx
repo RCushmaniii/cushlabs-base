@@ -3,9 +3,9 @@ import Link from 'next/link';
 export default function MarketingHomePage() {
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
-      <h1 className="text-3xl font-semibold">CushLabs Base</h1>
+      <h1 className="text-3xl font-semibold">Next.js Supabase Auth Starter</h1>
       <p className="mt-4 text-sm text-neutral-700">
-        Production-grade SaaS base scaffold built with Next.js App Router + Supabase.
+        Minimal starter for Supabase Auth + SSR session refresh + RLS-first database posture.
       </p>
 
       <div className="mt-10 flex gap-3">

@@ -4,11 +4,12 @@ import type { User } from '@supabase/supabase-js';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-import { env } from '@/lib/env';
+import { getEnv } from '@/lib/env';
 
 type AppRole = 'user' | 'admin';
 
 export async function updateSession(request: NextRequest) {
+  const env = getEnv();
   let response = NextResponse.next({
     request: {
       headers: request.headers

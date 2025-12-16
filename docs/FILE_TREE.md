@@ -2,7 +2,7 @@
 
 # 🌲 FILE_TREE.md (Proposed)
 
-This is the proposed “shape of the system” for CushLabs Base.
+This is the proposed “shape of the system” for this starter.
 
 It is intended to be:
 

@@ -4,7 +4,7 @@ import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
-import { env } from '@/lib/env';
+import { getEnv } from '@/lib/env';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 
 const schema = z.object({
@@ -19,6 +19,7 @@ export async function signInWithEmail(formData: FormData) {
     redirect('/sign-in?error=invalid_email');
   }
 
+  const env = getEnv();
   const origin = headers().get('origin') ?? env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
   const supabase = createSupabaseServerClient();
 

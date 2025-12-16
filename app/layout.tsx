@@ -1,15 +1,16 @@
-import './globals.css';
+import "./globals.css";
 
-import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: 'CushLabs Base',
-  description: 'Production-grade SaaS base scaffold.'
+  title: "Next.js Supabase Auth Starter",
+  description:
+    "Minimal Next.js + Supabase Auth + RLS starter with SSR session refresh.",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: ReactNode;
 }>) {

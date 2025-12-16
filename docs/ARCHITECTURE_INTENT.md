@@ -1,14 +1,14 @@
 ---
 # 🏗️ ARCHITECTURE_INTENT.md
 
-This document explains *why* CushLabs Base is structured the way it is.
+This document explains *why* this starter is structured the way it is.
 
 It is intentionally light on implementation details.
 ---
 
 ## Goals
 
-- Provide a production-grade SaaS foundation with minimal surface area.
+- Provide a minimal Auth + RLS starter with a production-minded security posture.
 - Keep security and correctness as the default (not optional).
 - Preserve “escape hatches” so the base can evolve without a rewrite.
 

@@ -4,17 +4,17 @@
 
 ## Project Name
 
-**CushLabs Base**
+**Next.js Supabase Auth Starter**
 
 ## One-Line Description
 
-A production-grade SaaS base scaffold built with Next.js App Router and Supabase, designed to be reused across client MVPs, internal experiments, and future products.
+A minimal Next.js App Router starter built around Supabase Auth, SSR-friendly session refresh, and an RLS-first database posture.
 
 ---
 
 ## Purpose
 
-CushLabs Base exists to provide a **reliable, opinionated foundation** for real SaaS products — not demos, tutorials, or speculative startups.
+This repo exists to provide a **small, production-minded foundation** for applications that need real authentication and real database security.
 
 This project prioritizes:
 
@@ -22,29 +22,21 @@ This project prioritizes:
 - boring, proven patterns over novelty
 - explicit boundaries over feature creep
 
-The goal is to reduce setup time, prevent architectural mistakes, and standardize how new SaaS projects begin.
+The goal is to reduce setup time, prevent common auth/RLS mistakes, and provide a starter that is easy to clone and extend.
 
 ---
 
 ## Intended Use Cases
 
-This scaffold is designed to be used for:
+This starter is designed to be used for:
 
-- **Client MVPs**
+- **MVPs and internal tools**
 
   - Fast, safe starting point with real auth and data
-
-- **Internal CushLabs experiments**
-
-  - Prototypes that may evolve into products
 
 - **Portfolio demonstration**
 
   - Evidence of senior-level systems thinking
-
-- **Future monetization**
-
-  - Optional base for paid extensions (billing, AI, multi-tenant)
 
 This is **not** designed for:
 
@@ -84,7 +76,7 @@ The secondary user is:
 
 ## What “Done” Means (v1)
 
-CushLabs Base v1 is complete when:
+v1 is complete when:
 
 - Auth works end-to-end (email + magic link)
 - Role-based access is enforced at the middleware level
@@ -92,7 +84,6 @@ CushLabs Base v1 is complete when:
 - Protected routes and layouts behave correctly
 - Admin access is isolated and explicit
 - Environment configuration is validated
-- Logging and error handling are production-safe
 - Documentation explains how and why things work
 - The repo can be cloned and extended without refactoring
 

@@ -1,7 +1,7 @@
 ---
-# CushLabs Base (Docs)
+# Next.js Supabase Auth Starter (Docs)
 
-This folder contains the decision-first documents that define what CushLabs Base is, what it refuses to be, and how to extend it safely.
+This folder contains the decision docs that define what this starter is, what it refuses to be, and how to extend it safely.
 ---
 
 ## Start Here

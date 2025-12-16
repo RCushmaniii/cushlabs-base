@@ -2,7 +2,7 @@
 
 # 📌 SCOPE_BOUNDARIES.md
 
-This document is the guardrail for CushLabs Base. If a request conflicts with anything below, the correct response is:
+This document is the guardrail for this starter. If a request conflicts with anything below, the correct response is:
 
 "Not in v1. Add it as an optional extension or a follow-on repo."
 
@@ -10,7 +10,7 @@ This document is the guardrail for CushLabs Base. If a request conflicts with an
 
 ## v1 Mission
 
-CushLabs Base ships a **production-grade SaaS foundation**:
+This starter ships a **minimal auth + RLS foundation**:
 
 - auth
 - database schema + RLS

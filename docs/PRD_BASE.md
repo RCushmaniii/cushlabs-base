@@ -1,7 +1,7 @@
 ---
 # 🧾 PRD_BASE.md (Platform Edition)
 
-CushLabs Base is a product: a production-grade SaaS foundation intended to be cloned and extended repeatedly.
+This starter is a minimal foundation intended to be cloned and extended repeatedly.
 ---
 
 ## Problem Statement
@@ -16,7 +16,7 @@ Most “SaaS starters” fail in one of two ways:
   - billing, analytics, flags, jobs, and multi-tenancy are bundled together
   - abstractions make it hard to delete or swap components
 
-CushLabs Base exists to ship the **minimum credible foundation** that experienced developers expect.
+This starter exists to ship the **minimum credible foundation** that experienced developers expect.
 
 ---
 
@@ -129,7 +129,7 @@ v1 is “done” when:
 
 ## Upgrade Paths (v2+)
 
-CushLabs Base should be designed so these can be added without a rewrite:
+This starter should be designed so these can be added without a rewrite:
 
 - billing
 - background jobs
