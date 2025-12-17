@@ -38,6 +38,17 @@ export default async function AppHomePage() {
         <p className="text-sm text-neutral-700">{t(lang, 'dashboardSubtitle')}</p>
       </header>
 
+      <div className="rounded border border-neutral-200 bg-white p-4">
+        <h2 className="text-sm font-semibold">{t(lang, 'demoStepsTitle')}</h2>
+        <p className="mt-2 text-sm text-neutral-700">{t(lang, 'demoStepsIntro')}</p>
+        <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm">
+          <li>{t(lang, 'demoStep1')}</li>
+          <li>{t(lang, 'demoStep2')}</li>
+          <li>{t(lang, 'demoStep3')}</li>
+          <li>{t(lang, 'demoStep4')}</li>
+        </ol>
+      </div>
+
       <div className="rounded border border-neutral-200 p-4">
         <h2 className="text-sm font-semibold">{t(lang, 'sessionProofTitle')}</h2>
         <dl className="mt-3 grid gap-2 text-sm">

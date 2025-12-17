@@ -133,6 +133,30 @@ const dict = {
     en: 'No notes yet.',
     es: 'Aún no hay notas.'
   },
+  demoStepsTitle: {
+    en: 'Demo steps',
+    es: 'Pasos del demo'
+  },
+  demoStepsIntro: {
+    en: 'Use this page to verify Auth, SSR session refresh, and RLS isolation.',
+    es: 'Usa esta página para verificar Auth, refresco de sesión SSR y aislamiento con RLS.'
+  },
+  demoStep1: {
+    en: 'Sign in via magic link, then return here.',
+    es: 'Inicia sesión con el enlace mágico y vuelve aquí.'
+  },
+  demoStep2: {
+    en: 'Confirm the Session / SSR Proof panel shows your server-derived user info.',
+    es: 'Confirma que el panel de sesión / SSR muestre tu usuario desde el servidor.'
+  },
+  demoStep3: {
+    en: 'Create a note. Sign out and sign in with a different email — you should not see the first user’s notes.',
+    es: 'Crea una nota. Cierra sesión e inicia con otro correo — no deberías ver las notas del primer usuario.'
+  },
+  demoStep4: {
+    en: 'Optional: promote yourself to admin (profiles.role) and visit /admin to test admin gating.',
+    es: 'Opcional: promuévete a admin (profiles.role) y visita /admin para probar el acceso de admin.'
+  },
   adminTitle: {
     en: 'Admin',
     es: 'Admin'
