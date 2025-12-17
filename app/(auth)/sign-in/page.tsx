@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { getLang, t } from "@/lib/i18n";
+
 import { signInWithEmail } from "./actions";
 
 export default function SignInPage({
@@ -7,65 +10,54 @@ export default function SignInPage({
 }: {
   searchParams: Record<string, string | string[] | undefined>;
 }) {
+  const lang = getLang();
   const error =
     typeof searchParams.error === "string" ? searchParams.error : undefined;
   const checkEmail = searchParams.check_email === "1";
 
   const errorMessage =
     error === "invalid_email"
-      ? {
-          en: "Please enter a valid email address.",
-          es: "Por favor ingresa un correo válido.",
-        }
+      ? t(lang, "invalidEmail")
       : error
-      ? {
-          en: "Unable to send sign-in link. Please try again.",
-          es: "No se pudo enviar el enlace. Intenta de nuevo.",
-        }
-      : null;
+        ? t(lang, "authFailed")
+        : null;
 
   return (
     <main className="mx-auto flex min-h-screen max-w-xl items-center justify-center px-6 py-16">
       <div className="w-full rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-semibold">Sign in / Iniciar sesión</h1>
-            <p className="mt-2 text-sm text-neutral-700">
-              We’ll email you a magic link to sign in.
-              <br />
-              Te enviaremos un enlace mágico para iniciar sesión.
-            </p>
+            <h1 className="text-2xl font-semibold">{t(lang, 'signInTitle')}</h1>
+            <p className="mt-2 text-sm text-neutral-700">{t(lang, 'signInIntro')}</p>
+            <p className="mt-2 text-xs text-neutral-600">{t(lang, 'signInNote')}</p>
           </div>
 
-          <Link href="/" className="text-sm text-neutral-700 underline">
-            Home / Inicio
-          </Link>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher lang={lang} nextPath="/sign-in" />
+            <Link href="/" className="text-sm text-neutral-700 underline">
+              {t(lang, 'home')}
+            </Link>
+          </div>
         </div>
 
         {checkEmail ? (
           <div className="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
-            Check your email for a sign-in link.
-            <br />
-            Revisa tu correo para el enlace de acceso.
+            {t(lang, 'checkEmailTitle')}
             <div className="mt-2 text-emerald-900/80">
-              Open the link on the same device/browser if possible.
-              <br />
-              Abre el enlace en el mismo dispositivo/navegador si es posible.
+              {t(lang, 'checkEmailTip')}
             </div>
           </div>
         ) : null}
 
         {errorMessage ? (
           <div className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
-            {errorMessage.en}
-            <br />
-            {errorMessage.es}
+            {errorMessage}
           </div>
         ) : null}
 
         <form action={signInWithEmail} className="mt-8 space-y-4">
           <label className="block text-sm font-medium">
-            Email
+            {t(lang, 'email')}
             <input
               name="email"
               type="email"
@@ -80,16 +72,16 @@ export default function SignInPage({
             type="submit"
             className="w-full rounded-lg bg-black px-4 py-2 text-sm font-medium text-white"
           >
-            Send link / Enviar enlace
+            {t(lang, 'sendLink')}
           </button>
         </form>
 
         <div className="mt-6 flex items-center justify-between">
           <Link href="/" className="text-sm text-neutral-700 underline">
-            Back / Volver
+            {t(lang, 'back')}
           </Link>
           <Link href="/app" className="text-sm text-neutral-700 underline">
-            App
+            {t(lang, 'app')}
           </Link>
         </div>
       </div>

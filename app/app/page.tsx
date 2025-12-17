@@ -1,8 +1,11 @@
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 
+import { getLang, t } from '@/lib/i18n';
+
 import { createNote, deleteNote } from './actions';
 
 export default async function AppHomePage() {
+  const lang = getLang();
   const supabase = createSupabaseServerClient();
   const {
     data: { user }
@@ -31,31 +34,31 @@ export default async function AppHomePage() {
   return (
     <section className="space-y-8">
       <header className="space-y-2">
-        <h1 className="text-2xl font-semibold">Dashboard</h1>
-        <p className="text-sm text-neutral-700">Session + RLS proof playground.</p>
+        <h1 className="text-2xl font-semibold">{t(lang, 'dashboardTitle')}</h1>
+        <p className="text-sm text-neutral-700">{t(lang, 'dashboardSubtitle')}</p>
       </header>
 
       <div className="rounded border border-neutral-200 p-4">
-        <h2 className="text-sm font-semibold">Session / SSR Proof</h2>
+        <h2 className="text-sm font-semibold">{t(lang, 'sessionProofTitle')}</h2>
         <dl className="mt-3 grid gap-2 text-sm">
           <div className="grid grid-cols-[140px_1fr] gap-3">
-            <dt className="text-neutral-600">Signed in</dt>
-            <dd className="font-medium">{user ? 'yes' : 'no'}</dd>
+            <dt className="text-neutral-600">{t(lang, 'signedIn')}</dt>
+            <dd className="font-medium">{user ? t(lang, 'yes') : t(lang, 'no')}</dd>
           </div>
           <div className="grid grid-cols-[140px_1fr] gap-3">
-            <dt className="text-neutral-600">Email</dt>
-            <dd className="font-medium">{user?.email ?? 'unknown'}</dd>
+            <dt className="text-neutral-600">{t(lang, 'email')}</dt>
+            <dd className="font-medium">{user?.email ?? t(lang, 'unknown')}</dd>
           </div>
           <div className="grid grid-cols-[140px_1fr] gap-3">
-            <dt className="text-neutral-600">User ID</dt>
-            <dd className="font-mono text-xs">{user?.id ?? 'unknown'}</dd>
+            <dt className="text-neutral-600">{t(lang, 'userId')}</dt>
+            <dd className="font-mono text-xs">{user?.id ?? t(lang, 'unknown')}</dd>
           </div>
           <div className="grid grid-cols-[140px_1fr] gap-3">
-            <dt className="text-neutral-600">Role</dt>
-            <dd className="font-medium">{role ?? 'unknown'}</dd>
+            <dt className="text-neutral-600">{t(lang, 'role')}</dt>
+            <dd className="font-medium">{role ?? t(lang, 'unknown')}</dd>
           </div>
           <div className="grid grid-cols-[140px_1fr] gap-3">
-            <dt className="text-neutral-600">Server time</dt>
+            <dt className="text-neutral-600">{t(lang, 'serverTime')}</dt>
             <dd className="font-mono text-xs">{serverTime}</dd>
           </div>
         </dl>
@@ -64,15 +67,15 @@ export default async function AppHomePage() {
       <div className="rounded border border-neutral-200 p-4">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-1">
-            <h2 className="text-sm font-semibold">Notes (RLS Proof)</h2>
-            <p className="text-xs text-neutral-600">You should only ever see your own notes.</p>
+            <h2 className="text-sm font-semibold">{t(lang, 'notesTitle')}</h2>
+            <p className="text-xs text-neutral-600">{t(lang, 'notesSubtitle')}</p>
           </div>
         </div>
 
         <form action={createNote} className="mt-4 flex flex-col gap-2 sm:flex-row">
           <input
             name="content"
-            placeholder="Write a note..."
+            placeholder={t(lang, 'notePlaceholder')}
             className="w-full rounded border border-neutral-300 px-3 py-2 text-sm"
             maxLength={500}
             required
@@ -81,7 +84,7 @@ export default async function AppHomePage() {
             type="submit"
             className="rounded bg-black px-4 py-2 text-sm font-medium text-white"
           >
-            Add
+            {t(lang, 'add')}
           </button>
         </form>
 
@@ -95,14 +98,14 @@ export default async function AppHomePage() {
               <form action={deleteNote} className="shrink-0">
                 <input type="hidden" name="id" value={note.id} />
                 <button type="submit" className="text-sm underline">
-                  Delete
+                  {t(lang, 'delete')}
                 </button>
               </form>
             </li>
           ))}
           {(notes ?? []).length === 0 ? (
             <li className="rounded border border-dashed border-neutral-300 p-3 text-sm text-neutral-600">
-              No notes yet.
+              {t(lang, 'noNotes')}
             </li>
           ) : null}
         </ul>
