@@ -8,9 +8,9 @@ export default function MarketingLayout({ children }: { children: ReactNode }) {
   const lang = getLang();
 
   return (
-    <div className="min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <PublicHeader lang={lang} />
-      {children}
+      <div className="flex-1">{children}</div>
       <PublicFooter lang={lang} />
     </div>
   );

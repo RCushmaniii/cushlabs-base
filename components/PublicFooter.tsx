@@ -6,7 +6,7 @@ import { t } from '@/lib/i18n-shared';
 export function PublicFooter({ lang }: { lang: Lang }) {
   return (
     <footer className="mt-16 border-t border-neutral-200 bg-white">
-      <div className="mx-auto grid max-w-5xl gap-10 px-6 py-10 sm:grid-cols-3">
+      <div className="mx-auto grid max-w-5xl gap-10 px-6 py-10 sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:gap-x-16">
         <div>
           <div className="flex items-center gap-2 text-sm font-semibold">
             <span className="h-2 w-2 rounded-full bg-[#ff6a3d]" aria-hidden="true" />

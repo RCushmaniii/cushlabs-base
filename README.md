@@ -6,8 +6,8 @@ Built as a clean, modern demo you can fork for MVPs.
 
 ## Live Demo
 
-- **App**: https://YOUR-VERCEL-DEPLOYMENT.vercel.app
-- **About**: https://YOUR-VERCEL-DEPLOYMENT.vercel.app/about
+- **App**: https://nextjs-supabase-auth-starter.vercel.app
+- **About**: https://nextjs-supabase-auth-starter.vercel.app/about
 
 ## Why this starter
 
