@@ -64,7 +64,11 @@ cp .env.example .env.local
 Required:
 
 - `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` (legacy `anon` key or new `sb_publishable_...` key)
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (preferred, `sb_publishable_...`)
+
+Legacy (still supported):
+
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` (legacy `anon` JWT key)
 
 Optional:
 
@@ -117,7 +121,7 @@ If you want a public demo that supports real sign-in, you need a hosted Supabase
    - `https://YOUR_DEPLOY_DOMAIN/auth/callback`
 4. Deploy to Vercel and set env vars:
    - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
    - `NEXT_PUBLIC_APP_URL=https://YOUR_DEPLOY_DOMAIN`
 
 To make an admin user for the demo:
