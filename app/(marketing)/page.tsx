@@ -1,6 +1,4 @@
 import Link from 'next/link';
-
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { getLang, t } from '@/lib/i18n';
 
 export default function MarketingHomePage() {
@@ -8,10 +6,6 @@ export default function MarketingHomePage() {
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
-      <div className="flex items-center justify-end">
-        <LanguageSwitcher lang={lang} nextPath="/" />
-      </div>
-
       <h1 className="mt-6 text-3xl font-semibold">{t(lang, 'siteTitle')}</h1>
       <p className="mt-4 text-sm text-neutral-700">{t(lang, 'siteTagline')}</p>
 

@@ -1,4 +1,6 @@
-import type { Lang } from '@/lib/i18n';
+'use client';
+
+import type { Lang } from '@/lib/i18n-shared';
 
 export function LanguageSwitcher({ lang, nextPath }: { lang: Lang; nextPath: string }) {
   const enClass = lang === 'en' ? 'font-semibold underline' : 'underline text-neutral-600';

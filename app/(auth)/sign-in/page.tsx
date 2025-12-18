@@ -1,6 +1,4 @@
 import Link from "next/link";
-
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { getLang, t } from "@/lib/i18n";
 
 import { signInWithEmail } from "./actions";
@@ -30,13 +28,6 @@ export default function SignInPage({
             <h1 className="text-2xl font-semibold">{t(lang, 'signInTitle')}</h1>
             <p className="mt-2 text-sm text-neutral-700">{t(lang, 'signInIntro')}</p>
             <p className="mt-2 text-xs text-neutral-600">{t(lang, 'signInNote')}</p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher lang={lang} nextPath="/sign-in" />
-            <Link href="/" className="text-sm text-neutral-700 underline">
-              {t(lang, 'home')}
-            </Link>
           </div>
         </div>
 
