@@ -34,14 +34,14 @@ Built as a clean, modern demo you can fork for MVPs.
 - Environment variable validation (Zod)
 - Minimal CI: `typecheck`, `lint`, `build`
 
-## What This Repo Is / Is Not
+## What This Repo Is
 
 This repo IS:
 
 - A minimal, production-minded auth + RLS starter
 - A good base to clone for MVPs where you want real auth and real DB security
 
-This repo IS NOT:
+## What This Repo Is Not
 
 - A shadcn/ui starter or design system template
 - A full SaaS product (billing, teams, subscriptions, multi-tenant RBAC)
