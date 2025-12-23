@@ -8,6 +8,7 @@ Built as a clean, modern demo you can fork for MVPs.
 
 - **App**: https://nextjs-supabase-auth-starter.vercel.app
 - **About**: https://nextjs-supabase-auth-starter.vercel.app/about
+- **Why Magic Links**: https://nextjs-supabase-auth-starter.vercel.app/why-use-magic-links
 
 ## Why this starter
 
@@ -24,10 +25,11 @@ Built as a clean, modern demo you can fork for MVPs.
 ## Features
 
 - Next.js 14 App Router + TypeScript (strict)
-- Supabase Auth (email magic link)
+- **Passwordless Authentication**: Supabase Auth with email magic links (no passwords to manage)
 - SSR-friendly session refresh in `middleware.ts` via `@supabase/ssr`
 - Protected routes example (`/app`)
 - Optional admin boundary example (`/admin`) gated by `profiles.role`
+- **Bilingual Support**: Full i18n implementation (English/Spanish) with cookie persistence
 - RLS-first migrations included:
   - `profiles` table + role enum + trigger + RLS policies
   - `notes` table with strict per-user RLS policies (RLS proof playground)
@@ -190,10 +192,13 @@ where id = '<user-uuid>';
 
 ## Routes
 
-- `/` public landing page
-- `/sign-in` sign-in (email magic link)
-- `/app` protected route (auth required)
-- `/admin` admin-only route (requires `profiles.role = 'admin'`)
+- `/` - Public landing page
+- `/about` - About page with features and benefits
+- `/why-use-magic-links` - Detailed explanation of passwordless authentication
+- `/sign-in` - Sign-in page (email magic link)
+- `/app` - Protected route (auth required)
+- `/admin` - Admin-only route (requires `profiles.role = 'admin'`)
+- `/lang?lang=<en|es>&next=<path>` - Language switcher
 
 ## Security Notes (Read This)
 

@@ -21,8 +21,8 @@ export default function SignInPage({
         : null;
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-xl items-center justify-center px-6 py-16">
-      <div className="w-full rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
+    <main className="mx-auto max-w-xl px-6 pb-8 pt-8 sm:pt-12">
+      <div className="mt-6 w-full rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h1 className="text-2xl font-semibold">{t(lang, 'signInTitle')}</h1>
@@ -67,12 +67,9 @@ export default function SignInPage({
           </button>
         </form>
 
-        <div className="mt-6 flex items-center justify-between">
+        <div className="mt-6">
           <Link href="/" className="text-sm text-neutral-700 underline">
             {t(lang, 'back')}
-          </Link>
-          <Link href="/app" className="text-sm text-neutral-700 underline">
-            {t(lang, 'app')}
           </Link>
         </div>
       </div>

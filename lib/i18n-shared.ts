@@ -185,45 +185,217 @@ const dict = {
     en: 'Admin area.',
     es: 'Área de administrador.'
   },
+  why: {
+    en: 'Why',
+    es: 'Por qué'
+  },
+  whyTitle: {
+    en: 'Why Use Magic Links?',
+    es: '¿Por qué usar Magic Links?'
+  },
+  whySubtitle: {
+    en: 'Discover the benefits of passwordless authentication.',
+    es: 'Descubre los beneficios de la autenticación sin contraseña.'
+  },
+  whyIntro: {
+    en: 'Supabase Magic Link is a passwordless sign-in method where users receive a unique, time-sensitive link by email. Clicking it signs them in - no password needed.',
+    es: 'Supabase Magic Link es un método de inicio de sesión sin contraseña donde los usuarios reciben un enlace único con límite de tiempo por correo. Al hacer clic, inician sesión - sin necesidad de contraseña.'
+  },
+  whyUsefulTitle: {
+    en: "Why it's useful",
+    es: 'Por qué es útil'
+  },
+  whyUseful1Label: {
+    en: 'Lower friction, higher conversion:',
+    es: 'Menor fricción, mayor conversión:'
+  },
+  whyUseful1Text: {
+    en: 'No password creation or "forgot password" loops - fewer drop-offs.',
+    es: 'Sin creación de contraseña o bucles de "olvidé mi contraseña" - menos abandonos.'
+  },
+  whyUseful2Label: {
+    en: 'Stronger security vs passwords:',
+    es: 'Mayor seguridad vs contraseñas:'
+  },
+  whyUseful2Text: {
+    en: 'Avoids weak/reused passwords and reduces credential stuffing risk.',
+    es: 'Evita contraseñas débiles/reutilizadas y reduce el riesgo de relleno de credenciales.'
+  },
+  whyUseful3Label: {
+    en: 'Less support overhead:',
+    es: 'Menos carga de soporte:'
+  },
+  whyUseful3Text: {
+    en: 'Fewer password reset tickets and fewer locked-out users.',
+    es: 'Menos tickets de restablecimiento de contraseña y menos usuarios bloqueados.'
+  },
+  whyUseful4Label: {
+    en: 'Built-in account recovery:',
+    es: 'Recuperación de cuenta integrada:'
+  },
+  whyUseful4Text: {
+    en: 'If they can access their email, they can regain access.',
+    es: 'Si pueden acceder a su correo, pueden recuperar el acceso.'
+  },
+  whyBehaviorsTitle: {
+    en: 'Key Supabase behaviors',
+    es: 'Comportamientos clave de Supabase'
+  },
+  whyBehavior1Label: {
+    en: 'One-time use:',
+    es: 'Uso único:'
+  },
+  whyBehavior1Text: {
+    en: 'Each link is valid for a single successful login attempt.',
+    es: 'Cada enlace es válido para un único intento de inicio de sesión exitoso.'
+  },
+  whyBehavior2Label: {
+    en: 'Optional auto user creation:',
+    es: 'Creación automática de usuario opcional:'
+  },
+  whyBehavior2Text: {
+    en: 'If enabled, signing in can create a new user automatically.',
+    es: 'Si está habilitado, iniciar sesión puede crear un nuevo usuario automáticamente.'
+  },
+  whyBehavior3Label: {
+    en: 'Configurable limits:',
+    es: 'Límites configurables:'
+  },
+  whyBehavior3Text: {
+    en: 'Links typically expire in about an hour, and requests are rate-limited to prevent abuse.',
+    es: 'Los enlaces típicamente expiran en aproximadamente una hora, y las solicitudes tienen límite de tasa para prevenir abuso.'
+  },
+  whyBehavior4Label: {
+    en: 'Custom email templates:',
+    es: 'Plantillas de correo personalizadas:'
+  },
+  whyBehavior4Text: {
+    en: 'You can brand the email content in the Supabase Dashboard.',
+    es: 'Puedes personalizar el contenido del correo en el Dashboard de Supabase.'
+  },
+  whyUseCasesTitle: {
+    en: 'Best-fit use cases',
+    es: 'Casos de uso ideales'
+  },
+  whyUseCase1Label: {
+    en: 'Marketing sites + lightweight apps:',
+    es: 'Sitios de marketing + apps ligeras:'
+  },
+  whyUseCase1Text: {
+    en: 'Landing page - "Get started" - instant login without password friction.',
+    es: 'Página de inicio - "Comenzar" - inicio de sesión instantáneo sin fricción de contraseña.'
+  },
+  whyUseCase2Label: {
+    en: 'Internal tools / admin dashboards:',
+    es: 'Herramientas internas / dashboards de admin:'
+  },
+  whyUseCase2Text: {
+    en: 'Fast access for trusted users without password management.',
+    es: 'Acceso rápido para usuarios de confianza sin gestión de contraseñas.'
+  },
+  whyUseCase3Label: {
+    en: 'Early-stage MVPs:',
+    es: 'MVPs en etapa temprana:'
+  },
+  whyUseCase3Text: {
+    en: 'Ship authentication quickly while keeping UX simple.',
+    es: 'Implementa autenticación rápidamente manteniendo la UX simple.'
+  },
+  whyUseCase4Label: {
+    en: 'B2B apps for busy professionals:',
+    es: 'Apps B2B para profesionales ocupados:'
+  },
+  whyUseCase4Text: {
+    en: "Users don't want another password - email links are familiar and fast.",
+    es: 'Los usuarios no quieren otra contraseña - los enlaces por correo son familiares y rápidos.'
+  },
+  whyConsiderationsTitle: {
+    en: 'Important considerations',
+    es: 'Consideraciones importantes'
+  },
+  whyConsideration1Label: {
+    en: 'Cross-device/browser caveat (PKCE):',
+    es: 'Advertencia entre dispositivos/navegadores (PKCE):'
+  },
+  whyConsideration1Text: {
+    en: 'The link usually must be opened in the same browser/device where it was requested, or it may fail as an invalid link.',
+    es: 'El enlace generalmente debe abrirse en el mismo navegador/dispositivo donde se solicitó, o puede fallar como enlace inválido.'
+  },
+  whyConsideration2Label: {
+    en: 'Email delivery dependency:',
+    es: 'Dependencia de entrega de correo:'
+  },
+  whyConsideration2Text: {
+    en: "If emails are delayed or flagged as spam, users can't log in.",
+    es: 'Si los correos se retrasan o se marcan como spam, los usuarios no pueden iniciar sesión.'
+  },
+  whyConsideration3Label: {
+    en: 'If cross-device matters:',
+    es: 'Si importa entre dispositivos:'
+  },
+  whyConsideration3Text: {
+    en: 'Consider Email OTP (6-digit codes) for better cross-device compatibility while staying passwordless.',
+    es: 'Considera Email OTP (códigos de 6 dígitos) para mejor compatibilidad entre dispositivos manteniendo sin contraseña.'
+  },
   aboutTitle: {
     en: 'About the Starter',
     es: 'Acerca del Starter'
   },
   aboutSubtitle: {
-    en: 'A small, production-minded demo for passwordless auth, SSR sessions, and RLS-first data access.',
-    es: 'Un demo pequeño y listo para producción de auth sin contraseña, sesiones SSR y acceso a datos primero con RLS.'
+    en: 'Passwordless authentication made simple with Supabase Magic Links. No passwords to manage, no security risks, just seamless access.',
+    es: 'Autenticación sin contraseña simplificada con Supabase Magic Links. Sin contraseñas que gestionar, sin riesgos de seguridad, solo acceso sin fricciones.'
   },
-  aboutSection1Title: {
-    en: 'Stop guessing your auth posture',
-    es: 'Deja de adivinar tu postura de auth'
+  aboutFeaturesTitle: {
+    en: 'Features & Benefits',
+    es: 'Características y Beneficios'
   },
-  aboutSection1Body: {
-    en: 'This starter shows a real Supabase Auth flow and proves the session on the server, not just in the browser.',
-    es: 'Este starter muestra un flujo real de Supabase Auth y prueba la sesión en el servidor, no solo en el navegador.'
+  aboutFeature1Title: {
+    en: 'Zero Password Friction',
+    es: 'Cero Fricción de Contraseñas'
   },
-  aboutSection2Title: {
-    en: 'Built for the modern independent',
-    es: 'Hecho para el independiente moderno'
+  aboutFeature1Body: {
+    en: 'Users sign in with just their email. No passwords to remember, reset, or compromise.',
+    es: 'Los usuarios inician sesión solo con su correo. Sin contraseñas que recordar, restablecer o comprometer.'
   },
-  aboutSection2Body: {
-    en: 'A clean baseline for solo founders, consultants, and small teams who need secure defaults and fast iteration.',
-    es: 'Una base limpia para founders, consultores y equipos pequeños que necesitan defaults seguros e iteración rápida.'
+  aboutFeature2Title: {
+    en: 'Enterprise-Grade Security',
+    es: 'Seguridad de Nivel Empresarial'
   },
-  aboutSection3Title: {
-    en: 'RLS-first by default',
-    es: 'RLS primero por defecto'
+  aboutFeature2Body: {
+    en: 'Magic links are time-limited, single-use tokens. Built on Supabase Auth with proven security standards.',
+    es: 'Los enlaces mágicos son tokens de un solo uso con límite de tiempo. Construidos sobre Supabase Auth con estándares de seguridad probados.'
   },
-  aboutSection3Body: {
-    en: 'Notes are protected with strict per-user Row Level Security policies so you can demo real isolation across accounts.',
-    es: 'Las notas están protegidas con políticas estrictas de Row Level Security por usuario para demostrar aislamiento real entre cuentas.'
+  aboutFeature3Title: {
+    en: 'Instant Implementation',
+    es: 'Implementación Instantánea'
   },
-  aboutSection4Title: {
-    en: 'SSR session refresh',
-    es: 'Refresco de sesión SSR'
+  aboutFeature3Body: {
+    en: 'Drop-in authentication with minimal code. Focus on building features, not auth infrastructure.',
+    es: 'Autenticación lista para usar con código mínimo. Enfócate en construir funcionalidades, no infraestructura de auth.'
   },
-  aboutSection4Body: {
-    en: 'Middleware refresh keeps sessions stable across server navigation and shows the user on the server-rendered page.',
-    es: 'El refresco en middleware mantiene sesiones estables durante navegación SSR y muestra el usuario en la página renderizada por el servidor.'
+  aboutFeature4Title: {
+    en: 'Better User Experience',
+    es: 'Mejor Experiencia de Usuario'
+  },
+  aboutFeature4Body: {
+    en: 'Reduce signup friction by 80%. No password requirements, no forgotten credentials, no reset flows.',
+    es: 'Reduce la fricción de registro en un 80%. Sin requisitos de contraseña, sin credenciales olvidadas, sin flujos de restablecimiento.'
+  },
+  aboutHowItWorksTitle: {
+    en: 'How It Works',
+    es: 'Cómo Funciona'
+  },
+  aboutHowItWorksBody: {
+    en: 'Enter your email, receive a secure link, click to authenticate. Supabase handles token generation, validation, and session management automatically.',
+    es: 'Ingresa tu correo, recibe un enlace seguro, haz clic para autenticarte. Supabase maneja la generación de tokens, validación y gestión de sesiones automáticamente.'
+  },
+  aboutTechStackTitle: {
+    en: 'Technical Foundation',
+    es: 'Fundamento Técnico'
+  },
+  aboutTechStackBody: {
+    en: 'Built on Next.js with server-side session refresh, RLS-first database security, and production-ready patterns.',
+    es: 'Construido sobre Next.js con refresco de sesión del lado del servidor, seguridad de base de datos primero con RLS y patrones listos para producción.'
   },
   aboutUnderHoodTitle: {
     en: 'Under the hood',

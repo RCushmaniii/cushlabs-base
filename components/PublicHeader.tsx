@@ -27,8 +27,8 @@ export function PublicHeader({ lang }: { lang: Lang }) {
 
         <nav className="hidden items-center gap-6 sm:flex">
           <div className="flex items-center gap-4 text-sm">
-            <Link href="/" className="text-neutral-700 hover:text-neutral-900">
-              {t(lang, 'home')}
+            <Link href="/why-use-magic-links" className="text-neutral-700 hover:text-neutral-900">
+              {t(lang, 'why')}
             </Link>
             <Link href="/about" className="text-neutral-700 hover:text-neutral-900">
               {t(lang, 'about')}
@@ -129,8 +129,8 @@ export function PublicHeader({ lang }: { lang: Lang }) {
 
         <div className="space-y-6 px-6 py-6">
           <div className="space-y-3 text-sm">
-            <Link href="/" className="block text-neutral-800" onClick={() => setMobileOpen(false)}>
-              {t(lang, 'home')}
+            <Link href="/why-use-magic-links" className="block text-neutral-800" onClick={() => setMobileOpen(false)}>
+              {t(lang, 'why')}
             </Link>
             <Link href="/about" className="block text-neutral-800" onClick={() => setMobileOpen(false)}>
               {t(lang, 'about')}

@@ -6,7 +6,7 @@ import { t } from '@/lib/i18n-shared';
 export function PublicFooter({ lang }: { lang: Lang }) {
   return (
     <footer className="mt-16 border-t border-neutral-200 bg-white">
-      <div className="mx-auto grid max-w-5xl gap-10 px-6 py-10 sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:gap-x-16">
+      <div className="mx-auto grid max-w-5xl gap-10 px-6 py-10 sm:grid-cols-2 md:grid-cols-[minmax(0,2fr)_minmax(120px,1fr)_minmax(120px,1fr)] sm:gap-x-12 md:gap-x-16">
         <div>
           <div className="flex items-center gap-2 text-sm font-semibold">
             <span className="h-2 w-2 rounded-full bg-[#ff6a3d]" aria-hidden="true" />
@@ -19,6 +19,9 @@ export function PublicFooter({ lang }: { lang: Lang }) {
         <div className="text-sm">
           <div className="font-semibold">{t(lang, 'docs')}</div>
           <div className="mt-3 space-y-2">
+            <Link href="/why-use-magic-links" className="block whitespace-nowrap text-neutral-700 hover:text-neutral-900">
+              {t(lang, 'why')}
+            </Link>
             <Link href="/about" className="block text-neutral-700 hover:text-neutral-900">
               {t(lang, 'about')}
             </Link>
@@ -36,13 +39,13 @@ export function PublicFooter({ lang }: { lang: Lang }) {
         <div className="text-sm">
           <div className="font-semibold">{t(lang, 'product')}</div>
           <div className="mt-3 space-y-2">
-            <Link href="/" className="block text-neutral-700 hover:text-neutral-900">
+            <Link href="/" className="block whitespace-nowrap text-neutral-700 hover:text-neutral-900">
               {t(lang, 'home')}
             </Link>
-            <Link href="/sign-in" className="block text-neutral-700 hover:text-neutral-900">
+            <Link href="/sign-in" className="block whitespace-nowrap text-neutral-700 hover:text-neutral-900">
               {t(lang, 'signIn')}
             </Link>
-            <Link href="/app" className="block text-neutral-700 hover:text-neutral-900">
+            <Link href="/app" className="block whitespace-nowrap text-neutral-700 hover:text-neutral-900">
               {t(lang, 'app')}
             </Link>
           </div>

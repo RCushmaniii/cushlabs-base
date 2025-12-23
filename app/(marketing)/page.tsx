@@ -11,16 +11,16 @@ export default function MarketingHomePage() {
 
       <div className="mt-10 flex gap-3">
         <Link
-          href="/sign-in"
+          href="/app"
           className="rounded bg-black px-4 py-2 text-sm font-medium text-white"
         >
           {t(lang, 'signIn')}
         </Link>
         <Link
-          href="/app"
+          href="/about"
           className="rounded border border-neutral-300 px-4 py-2 text-sm font-medium"
         >
-          {t(lang, 'app')}
+          {t(lang, 'about')}
         </Link>
       </div>
     </main>
