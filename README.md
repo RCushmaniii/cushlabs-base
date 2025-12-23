@@ -10,6 +10,12 @@ Built as a clean, modern demo you can fork for MVPs.
 - **About**: https://nextjs-supabase-auth-starter.vercel.app/about
 - **Why Magic Links**: https://nextjs-supabase-auth-starter.vercel.app/why-use-magic-links
 
+## Screenshots
+
+### Sign In Page
+
+![Sign In Page](.github/images/sign-in-screenshot.png)
+
 ## Why this starter
 
 - **Secure by default**
