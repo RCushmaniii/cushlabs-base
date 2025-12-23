@@ -14,7 +14,7 @@ Built as a clean, modern demo you can fork for MVPs.
 
 ### Sign In Page
 
-![Sign In Page](.github/images/login.jpg)
+<img src=".github/images/login.jpg" alt="Sign In Page" width="500">
 
 ## Why this starter
 
