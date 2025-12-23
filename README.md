@@ -14,7 +14,7 @@ Built as a clean, modern demo you can fork for MVPs.
 
 ### Sign In Page
 
-![Sign In Page](.github/images/sign-in-screenshot.png)
+![Sign In Page](.github/images/login.jpg)
 
 ## Why this starter
 
